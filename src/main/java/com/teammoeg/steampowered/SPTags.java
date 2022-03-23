@@ -18,6 +18,8 @@
 
 package com.teammoeg.steampowered;
 
+
+import net.minecraft.core.Holder;
 import net.minecraft.world.level.material.Fluid;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.Tag;
@@ -28,9 +30,9 @@ public class SPTags {
 
     }
 
-    public static final Tag.Named<Fluid> STEAM = forgeTag("steam");
+    public static final Holder<Fluid> STEAM = forgeTag("steam");
 
-    private static Tag.Named<Fluid> forgeTag(String name) {
+    private static Holder<Fluid> forgeTag(String name) {
         return FluidTags.bind("forge:" + name);
     }
 
